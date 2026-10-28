@@ -1,31 +1,35 @@
-# AquaLife — Water Refill Website
+# AquaLife — Kenyan Water Refill Website
 
-A premium, mobile-first website concept for a Kenyan water refill and delivery business. Built as a lightweight static site to make it fast to deploy and easy to maintain.
+A responsive static website concept for a water-refill business serving customers in Nairobi, Kenya.
 
-## Included
-- Responsive homepage with premium water imagery and brand styling
-- Product enquiry cards for refill sizes and delivery
-- WhatsApp enquiry flow prepared for a verified business number
-- Mobile navigation, accessible FAQ accordions, reduced-motion support
-- SEO description, semantic HTML, responsive CSS and no build step
+## Current build
+- Kenya-focused copy and layout; no unrelated lifestyle portraits
+- Responsive mobile navigation and product enquiry cards
+- Refill and delivery information that does not invent prices, certifications or service guarantees
+- WhatsApp enquiry flow ready for the client's verified number
+- FAQ section, accessibility basics, reduced-motion support and broken-image fallback styling
+- Plain HTML, CSS and JavaScript; no build step or runtime dependencies
 
 ## Run locally
-Open `index.html` in a browser, or serve the folder with any static file server.
+Open `index.html` in a browser or serve this folder with a static file server.
 
 ## Deploy
-This repository can be imported as a static site into Vercel. No build command is required; use the repository root as the output directory if prompted.
+The repository is linked to Vercel and deploys from the `main` branch. Static site; no build command is required.
 
-## Launch checklist — complete with the client
-1. Set the real WhatsApp number in `script.js` in `WHATSAPP_NUMBER` using international digits only (Kenya format, e.g. `2547XXXXXXXX`; do not use this example as the actual number).
-2. Confirm the business name, logo, phone number, email and physical address.
-3. Replace enquiry-only product details with the client's verified product range and KES prices.
-4. Confirm actual Nairobi delivery zones, fees, business hours and order cut-off times.
-5. Confirm permission to use the product and brand photographs; replace demo imagery with client-owned photos where possible.
-6. Add only verified water-quality, hygiene, licensing and certification claims.
-7. Test the WhatsApp links on Android and iOS, verify all images on mobile data, and check the live deployed domain.
+## Required before the client launch
+1. Add the client's verified WhatsApp number to `WHATSAPP_NUMBER` in `script.js` (international digits only, e.g. `2547XXXXXXXX`; this is an example format, not a real contact).
+2. Confirm the official business name, logo, phone, email and physical location.
+3. Confirm the product list and current KES prices; do not publish demo pricing.
+4. Confirm Nairobi neighbourhoods served, delivery charges, delivery hours and order cut-off times.
+5. Replace illustrative third-party photos with client-owned or properly licensed images before the commercial launch. Current reference imagery is linked from:
+   - Boreal Light / Kitengela WaterKiosk: a photo of a 20L bottle being filled in Kenya.
+   - Norwa Waters: a photo of a water-refilling station.
+   These images are illustrative references, not AquaLife's own premises or staff. Confirm permission/licensing before retaining them on a public commercial site.
+6. Add water quality, hygiene, KEBS or other certification claims only when the client provides evidence.
+7. Test image loading, navigation, WhatsApp links and the full page on Android/mobile data after deployment.
 
-## Important
-The current website is a presentation-ready starter, not a connected order-management system. Orders are sent to WhatsApp only after the client's real number is configured. No online payments, live stock, customer accounts, or delivery tracking are implemented. Prices, product availability and delivery coverage are intentionally not invented.
+## Honest scope
+This is a presentation website, not a connected order-management system. No payment gateway, M-Pesa STK Push, stock management, customer accounts or delivery tracking is implemented. WhatsApp ordering stays disabled until the actual number is configured. Prices, product availability, business hours and exact delivery coverage are intentionally not invented.
 
-## Technology
-Plain HTML, CSS and JavaScript. No runtime dependencies or build tooling required.
+## Tech
+Semantic HTML, CSS and vanilla JavaScript.
