@@ -3,7 +3,7 @@
  * Before launch, set the client's verified WhatsApp number below.
  * Format: international digits only, e.g. 2547XXXXXXXX (example only).
  */
-const WHATSAPP_NUMBER = "";
+const WHATSAPP_NUMBER = "254790380309";
 const toast = document.querySelector(".toast");
 let toastTimer;
 function showToast(message) {
@@ -23,11 +23,11 @@ function openWhatsApp(message) {
 }
 document.querySelectorAll("[data-product]").forEach((button) => {
   button.addEventListener("click", () => {
-    openWhatsApp("Hello AquaLife. I'd like to enquire about " + button.dataset.product + ". Please confirm the current price, availability and delivery options. My location is: ");
+    openWhatsApp("Hello AquaLife. I'd like to enquire about " + button.dataset.product + ". Please confirm the current price, availability and delivery options. My area is Westlands, Nairobi. My delivery location is: ");
   });
 });
 document.querySelectorAll('[data-whatsapp="general"]').forEach((button) => {
-  button.addEventListener("click", () => openWhatsApp("Hello AquaLife. Please share your available water refills, current prices and delivery options."));
+  button.addEventListener("click", () => openWhatsApp("Hello AquaLife! I would like to order water in Westlands, Nairobi. Please confirm availability and final prices for 300ml, 500ml, 1L, 1.5L, 5L, 10L and 18.9–20L options, plus delivery fees."));
 });
 const menuToggle = document.querySelector(".menu-toggle");
 const nav = document.querySelector(".main-nav");
