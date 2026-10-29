@@ -1,48 +1,39 @@
-# AquaLife — Water Refills & Bottled Water Website
+# AquaLife — Water Refill Delivery Website
 
-A responsive, mobile-first presentation website for AquaLife, currently positioned around water refill and bottled-water enquiries in Westlands, Nairobi, Kenya.
+Mobile-first single-page business website for AquaLife, presented as a water refill and bottled-water service in Westlands, Nairobi.
 
-## Live website
-- Production deployment: https://aqualife-1w1h0o8v1-brians-projects-a132bca2.vercel.app
-- Source repository: https://github.com/yobi369/AquaLife
+## Repository and deployment
+- Repository: https://github.com/yobi369/AquaLife
+- Current known Vercel URL: https://aqualife-peach.vercel.app
+- WhatsApp/call contact configured from previously supplied business details: **0790 380 309** / **+254790380309**
 
-## Customer-facing features
-- Product groupings for 300ml, 500ml, 1L, 1.5L, 5L, 10L and 18.9–20L refill enquiries.
-- Clearly labelled indicative prices in KES; all estimates must be replaced or confirmed by the business before a commercial launch.
-- WhatsApp enquiry buttons on the contact section, product cards and a persistent floating contact shortcut.
-- Prefilled enquiry messages ask customers to confirm stock, final price and delivery options.
-- Service area messaging focused on Westlands, Nairobi; exact coverage, delivery timing and charges are confirmed directly.
-- Responsive navigation, FAQ accordions, semantic page sections, reduced-motion support, descriptive image alt text and fallback styling for failed images.
-- Basic search/social metadata (description, Open Graph and social-card fields).
+## Implemented
+- Sticky navigation and fixed mobile WhatsApp CTA.
+- Price cards for 20L, 10L, 5L, 1.5L, 1L, 500ml and 300ml.
+- Per-size WhatsApp messages and general order enquiry.
+- Click-to-call footer link.
+- Delivery/payment detail placeholders, FAQs and testimonial placeholders.
+- Responsive styles, keyboard focus styles and reduced-motion support.
+- SEO metadata, Open Graph/Twitter cards and basic LocalBusiness structured data.
+- Local SVG illustration placeholders in `/images`; replace them with genuine AquaLife photography before final commercial launch.
 
-## Technology
-- Semantic HTML
-- CSS, including responsive layouts and reduced-motion handling
-- Vanilla JavaScript
-- Static deployment on Vercel; no server-side order system is included.
+## Business details requiring confirmation
+- Business-approved price list and stock availability.
+- Hours of operation.
+- Exact delivery areas beyond Westlands, delivery fee and delivery window.
+- Accepted payment methods and official M-Pesa till/paybill.
+- Bottle deposit / return terms.
+- Water source, treatment/testing evidence and any valid certification.
+- First-order promotion and any subscription terms.
+- Real customer reviews and customer consent.
+- Replace illustration placeholders with real product, delivery, office and family photos.
 
-## Important launch checklist
-Before advertising the site as the official customer ordering channel, the business owner should confirm:
-1. The WhatsApp number currently configured in `script.js` is the correct, business-controlled contact.
-2. The official business name, logo, service address and service-area boundaries.
-3. The actual products, sizes, prices, stock availability and bottle/deposit/refill terms.
-4. Delivery charges, operating hours, estimated delivery windows and minimum order quantities.
-5. Accepted payment methods and the official M-Pesa details, if applicable. The site does not process payments.
-6. Any water-quality, hygiene or certification claims, supported by evidence before publishing them.
-7. Replace illustrative Unsplash stock photos with real AquaLife product, premises and delivery photos when available.
+The supplied phone number is used for WhatsApp and click-to-call. Confirm that it is the correct business line and that the account accepts WhatsApp messages before launch.
 
-## Current limitations
-- Prices are prototype estimates, not a verified live price list.
-- Stock, delivery eligibility, delivery timing, and payment methods are not connected to a backend and are not automatically confirmed.
-- WhatsApp is a handoff to an external app/site; the website does not receive order status or confirm a successful message send.
-- No checkout, M-Pesa STK Push, payment processing, inventory, customer accounts, order tracking, analytics or CRM is implemented.
-- HTTP 200 from Vercel confirms the page is served; it does not prove that every device, image URL or WhatsApp flow has been tested end-to-end.
+## Scope and limitations
+This is an enquiry-led static website, not a transactional e-commerce system. It has no cart, online payment processing, inventory, dispatch management or order tracking. Do not publish claims about certifications, water testing, delivery guarantees, customer counts or reviews without evidence.
 
-## Run locally
-Open `index.html` directly in a browser or serve the repository with any static file server.
-
-## Deployment
-The Vercel project is linked to the `main` branch. The latest deployment observed during this update was marked `READY` and served the page with HTTP 200. Re-check the latest deployment after each source change.
-
-## Presentation guidance
-Present the site as a polished customer enquiry website/prototype. Explain that it helps customers compare sizes, see indicative price ranges and start a WhatsApp enquiry. Do not claim that it accepts payment, guarantees delivery, verifies water quality or manages stock until those capabilities are actually implemented and confirmed.
+## Quick post-launch wins
+1. Track WhatsApp CTA clicks with a privacy-appropriate analytics setup.
+2. Complete and verify the Google Business Profile with real hours, photos and service area.
+3. Test a clearly defined first-order offer and measure enquiry-to-order conversion.
