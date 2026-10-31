@@ -68,3 +68,21 @@
 .feedback-disclosure{font:9px/1.7 var(--mono);letter-spacing:.2px;color:#738777;margin:22px 0 0}
 @media(max-width:850px){.customer-feedback{padding:78px 6%}.feedback-heading{grid-template-columns:1fr;gap:20px;margin:42px 0 30px}.feedback-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:520px){.feedback-top{font-size:7px}.feedback-heading h2{font-size:58px}.feedback-heading>p{font-size:12px}.feedback-grid{grid-template-columns:1fr}.feedback-card{min-height:205px;padding:23px}.feedback-card>p{font-size:15px;margin:18px 0 24px}}
+
+
+/* Single-review carousel: one customer story at a time */
+.feedback-carousel{max-width:780px;margin:0 auto}
+.feedback-track{position:relative;min-height:285px}
+.feedback-track .feedback-card{min-height:285px;padding:36px 42px;animation:feedback-enter .55s ease both}
+.feedback-track .feedback-card[hidden]{display:none}
+.feedback-track .feedback-card>p{font-size:clamp(18px,2.3vw,24px);max-width:650px}
+.feedback-controls{display:flex;align-items:center;justify-content:center;gap:18px;margin-top:22px}
+.feedback-arrow{width:42px;height:42px;border:1px solid #9db49c;border-radius:50%;background:transparent;color:var(--forest);font-size:20px;cursor:pointer}
+.feedback-arrow:hover,.feedback-arrow:focus-visible{background:var(--forest);color:#fff}
+.feedback-dots{display:flex;align-items:center;gap:9px}
+.feedback-dot{width:8px;height:8px;padding:0;border:0;border-radius:50%;background:#b8c9b5;cursor:pointer}
+.feedback-dot.is-active{width:24px;border-radius:8px;background:#315c43}
+.feedback-timing{font:8px var(--mono);letter-spacing:.8px;color:#718675;margin-left:12px}
+@keyframes feedback-enter{from{opacity:0;transform:translateX(22px)}to{opacity:1;transform:translateX(0)}}
+@media(max-width:520px){.feedback-track{min-height:260px}.feedback-track .feedback-card{min-height:260px;padding:27px 22px}.feedback-controls{gap:12px;flex-wrap:wrap}.feedback-timing{width:100%;text-align:center;margin:3px 0 0}}
+@media(prefers-reduced-motion:reduce){.feedback-track .feedback-card{animation:none}}
