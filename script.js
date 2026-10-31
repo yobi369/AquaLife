@@ -6,3 +6,49 @@ document.querySelectorAll(".format-option").forEach(button=>button.addEventListe
 selectFormat("20l");
 document.querySelectorAll("[data-whatsapp]").forEach(link=>{const message=link.dataset.whatsapp==="bulk"?"Hi Mount Abadares, I am interested in an order of 50 or more parcels and would like to arrange free delivery within Machakos County. My location is: ":"Hi Mount Abadares, I would like to place an order. My location is: ";link.href=orderUrl(message);link.target="_blank";link.rel="noopener noreferrer"});
 const year=document.querySelector("#year");if(year)year.textContent=new Date().getFullYear();
+/* Accessible customer testimonial carousel.
+   Customer quotes intentionally remain unpublished until supplied and approved. */
+(()=>{
+ const people=[
+  {name:"Daniel Kilonzo",initials:"DK"},
+  {name:"John Muturi",initials:"JM"},
+  {name:"Samson Juma",initials:"SJ"},
+  {name:"Mary Wambua",initials:"MW"},
+  {name:"Jane Wangui",initials:"JW"}
+ ];
+ const copy="Customer feedback will appear here once it has been received and approved for publication.";
+ const name=document.querySelector("#testimonial-name");
+ if(!name)return;
+ const initials=document.querySelector("#testimonial-initials");
+ const count=document.querySelector("#testimonial-count");
+ const quote=document.querySelector("#testimonial-copy");
+ const dots=[...document.querySelectorAll(".testimonial-dot")];
+ const stage=document.querySelector(".testimonial-stage");
+ let index=0,timer=null;
+ const reduced=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+ function show(next){
+  index=(next+people.length)%people.length;
+  const person=people[index];
+  name.textContent=person.name;
+  initials.textContent=person.initials;
+  count.textContent=String(index+1).padStart(2,"0")+" / 05";
+  quote.textContent=copy;
+  dots.forEach((dot,i)=>{
+   const active=i===index;
+   dot.classList.toggle("active",active);
+   if(active)dot.setAttribute("aria-current","true");
+   else dot.removeAttribute("aria-current");
+  });
+ }
+ function stop(){if(timer){window.clearInterval(timer);timer=null;}}
+ function start(){stop();if(!reduced&&!document.hidden)timer=window.setInterval(()=>show(index+1),6500);}
+ document.querySelector("#testimonial-prev").addEventListener("click",()=>{show(index-1);start();});
+ document.querySelector("#testimonial-next").addEventListener("click",()=>{show(index+1);start();});
+ dots.forEach((dot,i)=>dot.addEventListener("click",()=>{show(i);start();}));
+ stage.addEventListener("mouseenter",stop);
+ stage.addEventListener("mouseleave",start);
+ stage.addEventListener("focusin",stop);
+ stage.addEventListener("focusout",start);
+ document.addEventListener("visibilitychange",()=>document.hidden?stop():start());
+ show(0);start();
+})();
