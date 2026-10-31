@@ -20,3 +20,31 @@ document.querySelector("#checkout-form")?.addEventListener("submit",event=>{even
 renderBasket();
 document.querySelectorAll("[data-whatsapp]").forEach(link=>{const message=link.dataset.whatsapp==="bulk"?"Hi Mount Abadares, I am interested in an order of 50 or more parcels and would like to arrange free delivery within Machakos County. My location is: ":"Hi Mount Abadares, I would like to place an order. My location is: ";link.href=orderUrl(message);link.target="_blank";link.rel="noopener noreferrer"});
 const year=document.querySelector("#year");if(year)year.textContent=new Date().getFullYear();
+
+
+/* Customer review carousel: advances every four seconds, pauses on interaction */
+(()=>{
+ const root=document.querySelector(".feedback-carousel");
+ if(!root)return;
+ const slides=[...root.querySelectorAll("[data-feedback-slide]")];
+ const dots=[...root.querySelectorAll("[data-feedback-dot]")];
+ const reducedMotion=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+ if(slides.length<2)return;
+ let current=0,timer=null,paused=false;
+ const show=(index)=>{
+  current=(index+slides.length)%slides.length;
+  slides.forEach((slide,i)=>{slide.hidden=i!==current;slide.classList.toggle("is-active",i===current);});
+  dots.forEach((dot,i)=>{dot.classList.toggle("is-active",i===current);if(i===current)dot.setAttribute("aria-current","true");else dot.removeAttribute("aria-current");});
+ };
+ const stop=()=>{if(timer){window.clearInterval(timer);timer=null;}};
+ const start=()=>{stop();if(!paused&&!reducedMotion)timer=window.setInterval(()=>show(current+1),4000);};
+ root.querySelector("[data-feedback-prev]")?.addEventListener("click",()=>{show(current-1);start();});
+ root.querySelector("[data-feedback-next]")?.addEventListener("click",()=>{show(current+1);start();});
+ dots.forEach((dot)=>dot.addEventListener("click",()=>{show(Number(dot.dataset.feedbackDot));start();}));
+ root.addEventListener("mouseenter",()=>{paused=true;stop();});
+ root.addEventListener("mouseleave",()=>{paused=false;start();});
+ root.addEventListener("focusin",()=>{paused=true;stop();});
+ root.addEventListener("focusout",event=>{if(!root.contains(event.relatedTarget)){paused=false;start();}});
+ document.addEventListener("visibilitychange",()=>{if(document.hidden)stop();else start();});
+ show(0);start();
+})();
