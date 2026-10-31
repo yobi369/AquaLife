@@ -1,39 +1,42 @@
-# AquaLife — Water Refill Delivery Website
+# Mount Abadares Fresh Water — The Water Experience
 
-Mobile-first single-page business website for AquaLife, presented as a water refill and bottled-water service in Westlands, Nairobi.
+A complete concept rebuild for Mount Abadares Fresh Water, packed by Kibali Traders Enterprises in Kithimani, Yatta, Machakos County, Kenya.
 
-## Repository and deployment
+## Live website
+- https://aqualife-peach.vercel.app/
 - Repository: https://github.com/yobi369/AquaLife
-- Current known Vercel URL: https://aqualife-peach.vercel.app
-- WhatsApp/call contact configured from previously supplied business details: **0790 380 309** / **+254790380309**
 
-## Implemented
-- Sticky navigation and fixed mobile WhatsApp CTA.
-- Price cards for 20L, 10L, 5L, 1.5L, 1L, 500ml and 300ml.
-- Per-size WhatsApp messages and general order enquiry.
-- Click-to-call footer link.
-- Delivery/payment detail placeholders, FAQs and testimonial placeholders.
-- Responsive styles, keyboard focus styles and reduced-motion support.
-- SEO metadata, Open Graph/Twitter cards and basic LocalBusiness structured data.
-- Local SVG illustration placeholders in `/images`; replace them with genuine AquaLife photography before final commercial launch.
+## Concept
+The Water Experience is an editorial, product-discovery website rather than a conventional water-delivery template. Visitors enter through a distinctive brand statement, discover the brand's local identity, interact with a six-format Water Index, and launch a prefilled WhatsApp order for their selected product.
 
-## Business details requiring confirmation
-- Business-approved price list and stock availability.
-- Hours of operation.
-- Exact delivery areas beyond Westlands, delivery fee and delivery window.
-- Accepted payment methods and official M-Pesa till/paybill.
-- Bottle deposit / return terms.
-- Water source, treatment/testing evidence and any valid certification.
-- First-order promotion and any subscription terms.
-- Real customer reviews and customer consent.
-- Replace illustration placeholders with real product, delivery, office and family photos.
+## Experience features
+- Original mountain-and-vessel SVG artwork.
+- New forest, mineral-green and acid-lime visual identity.
+- Interactive product selector with live price, product details and WhatsApp order link.
+- Parcel price clarification for 500ml, 1L and 1.5L.
+- Prominent free delivery message for 50+ parcels within the Machakos County service area.
+- Responsive mobile experience and fixed mobile order action.
+- SEO metadata and LocalBusiness structured data.
+- Two business phone contacts.
 
-The supplied phone number is used for WhatsApp and click-to-call. Confirm that it is the correct business line and that the account accepts WhatsApp messages before launch.
+## Confirmed catalogue
+| Product | Price |
+|---|---:|
+| 20L refill | KSh 220 |
+| 10L refill | KSh 180 |
+| 5L bottle | KSh 350 |
+| 1.5L parcel | KSh 350 per parcel |
+| 1L parcel | KSh 330 per parcel |
+| 500ml parcel | KSh 300 per parcel |
 
-## Scope and limitations
-This is an enquiry-led static website, not a transactional e-commerce system. It has no cart, online payment processing, inventory, dispatch management or order tracking. Do not publish claims about certifications, water testing, delivery guarantees, customer counts or reviews without evidence.
+Parcel prices apply to 500ml, 1L and 1.5L. Free delivery applies to 50+ parcels within the Machakos County service area. Smaller-order delivery availability and charges must be confirmed directly.
 
-## Quick post-launch wins
-1. Track WhatsApp CTA clicks with a privacy-appropriate analytics setup.
-2. Complete and verify the Google Business Profile with real hours, photos and service area.
-3. Test a clearly defined first-order offer and measure enquiry-to-order conversion.
+## Business
+- Mount Abadares Fresh Water
+- Packed by Kibali Traders Enterprises
+- Kithimani, Yatta, Machakos County, Kenya
+- +254 729 103423
+- +254 725 532264
+
+## Scope and accuracy
+This is an enquiry-led static website, not a payment, stock or dispatch system. Payment details, delivery times, bottle deposits, business hours, water-source details, test results and certification claims are not asserted without business confirmation. No fabricated testimonials or customer metrics are included.
