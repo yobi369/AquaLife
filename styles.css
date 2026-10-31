@@ -36,3 +36,16 @@
 
 /* Keep the complete Mount Abadares wordmark visible */
 .brand{flex:0 0 auto;min-width:0;white-space:nowrap}.brand-wordmark{display:block;width:clamp(205px,24vw,270px)!important;height:auto!important;min-height:52px;max-height:68px;flex:0 0 auto;object-fit:contain;object-position:left center;overflow:visible}.footer-brand .brand-wordmark{width:230px!important;max-height:60px}@media(max-width:760px){.brand-wordmark{width:clamp(190px,48vw,235px)!important;min-height:46px}.footer-brand .brand-wordmark{width:210px!important}}@media(max-width:380px){.brand-wordmark{width:185px!important;min-height:44px}}
+
+/* Clear, business-focused ordering information */
+.ordering-steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:#c6d5c7;border:1px solid #c6d5c7;margin:48px 0 0}
+.ordering-step{background:#f7f5e9;padding:28px 22px;min-height:210px}
+.ordering-step-no{display:inline-grid;place-items:center;width:34px;height:34px;border:1px solid #8da58e;border-radius:50%;font:10px var(--mono);color:#507d59}
+.ordering-step h3{font-size:18px;line-height:1.2;margin:28px 0 10px;color:var(--forest)}
+.ordering-step p{font-size:13px;line-height:1.65;color:#66796e;margin:0}
+.ordering-foot{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:22px;padding:24px 0;border-top:1px solid #c6d5c7;margin-top:28px}
+.ordering-foot>span{font:9px var(--mono);letter-spacing:1px;color:#507d59}
+.ordering-foot p{font-size:13px;line-height:1.6;color:#536b59;margin:0}
+.ordering-foot a{font:10px var(--mono);letter-spacing:.6px;color:var(--forest);text-decoration:none;border-bottom:1px solid #7aa17a;padding-bottom:5px;white-space:nowrap}
+@media(max-width:850px){.ordering-steps{grid-template-columns:repeat(2,minmax(0,1fr))}.ordering-foot{grid-template-columns:1fr;gap:10px}}
+@media(max-width:480px){.ordering-step{padding:22px 16px;min-height:205px}.ordering-step h3{font-size:16px;margin-top:22px}.ordering-step p{font-size:12px}.ordering-foot{padding:20px 0}}
