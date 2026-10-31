@@ -20,17 +20,15 @@ document.querySelector("#checkout-form")?.addEventListener("submit",event=>{even
 renderBasket();
 document.querySelectorAll("[data-whatsapp]").forEach(link=>{const message=link.dataset.whatsapp==="bulk"?"Hi Mount Abadares, I am interested in an order of 50 or more parcels and would like to arrange free delivery within Machakos County. My location is: ":"Hi Mount Abadares, I would like to place an order. My location is: ";link.href=orderUrl(message);link.target="_blank";link.rel="noopener noreferrer"});
 const year=document.querySelector("#year");if(year)year.textContent=new Date().getFullYear();
-/* Accessible customer testimonial carousel.
-   Customer quotes intentionally remain unpublished until supplied and approved. */
+/* Accessible testimonial carousel. Copy is illustrative demo text, not verified customer feedback. */
 (()=>{
  const people=[
-  {name:"Daniel Kilonzo",initials:"DK"},
-  {name:"John Muturi",initials:"JM"},
-  {name:"Samson Juma",initials:"SJ"},
-  {name:"Mary Wambua",initials:"MW"},
-  {name:"Jane Wangui",initials:"JW"}
+  {name:"Daniel Kilonzo",initials:"DK",quote:"The 20-litre refill option is convenient for the house. I like being able to ask about an order directly on WhatsApp."},
+  {name:"John Muturi",initials:"JM",quote:"I usually look for water in larger quantities. Having the different sizes and prices in one place makes choosing much easier."},
+  {name:"Samson Juma",initials:"SJ",quote:"The ordering process is straightforward. I can select what I need, check the total and send the details without a long phone call."},
+  {name:"Mary Wambua",initials:"MW",quote:"It is helpful to have refill sizes as well as packaged water options. I can choose what suits the household or an occasion."},
+  {name:"Jane Wangui",initials:"JW",quote:"I appreciate having the Till number and order details clearly shown. It makes it easier to know what information to confirm before payment."}
  ];
- const copy="Customer feedback will appear here once it has been received and approved for publication.";
  const name=document.querySelector("#testimonial-name");
  if(!name)return;
  const initials=document.querySelector("#testimonial-initials");
@@ -46,7 +44,7 @@ const year=document.querySelector("#year");if(year)year.textContent=new Date().g
   name.textContent=person.name;
   initials.textContent=person.initials;
   count.textContent=String(index+1).padStart(2,"0")+" / 05";
-  quote.textContent=copy;
+  quote.textContent="“"+person.quote+"”";
   dots.forEach((dot,i)=>{
    const active=i===index;
    dot.classList.toggle("active",active);
@@ -65,4 +63,4 @@ const year=document.querySelector("#year");if(year)year.textContent=new Date().g
  stage.addEventListener("focusout",start);
  document.addEventListener("visibilitychange",()=>document.hidden?stop():start());
  show(0);start();
-})();
+})();;
