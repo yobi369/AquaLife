@@ -1,7 +1,7 @@
 const WHATSAPP_NUMBER="254729103423";
 const generalMessage="Hi Mount Abadares, I'd like to order water. My area is: ";
 function whatsappUrl(message){return "https://wa.me/"+WHATSAPP_NUMBER+"?text="+encodeURIComponent(message)}
-document.querySelectorAll("[data-whatsapp]").forEach(el=>{const kind=el.dataset.whatsapp;const message=kind==="offer"?"Hi Mount Abadares, please tell me about your first-order offer and weekly refill options.":generalMessage;el.href=whatsappUrl(message);el.target="_blank";el.rel="noopener noreferrer";});
+document.querySelectorAll("[data-whatsapp]").forEach(el=>{const kind=el.dataset.whatsapp;const message=kind==="offer"||kind==="bulk"?"Hi Mount Abadares, please tell me about your first-order offer and weekly refill options.":generalMessage;el.href=whatsappUrl(message);el.target="_blank";el.rel="noopener noreferrer";});
 document.querySelectorAll("[data-product]").forEach(el=>{const product=el.dataset.product;el.href=whatsappUrl("Hi Mount Abadares, I'd like 1 parcel of "+product+" to [my area]. Please confirm price and delivery.");el.target="_blank";el.rel="noopener noreferrer";});
 const toggle=document.querySelector(".menu-toggle");const nav=document.querySelector("#nav");if(toggle&&nav){toggle.addEventListener("click",()=>{const open=nav.classList.toggle("open");toggle.setAttribute("aria-expanded",String(open));toggle.setAttribute("aria-label",open?"Close navigation":"Toggle navigation");});nav.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{nav.classList.remove("open");toggle.setAttribute("aria-expanded","false")}));}
 document.querySelectorAll(".faq-list summary").forEach(summary=>{summary.setAttribute("aria-label",summary.textContent.trim())});
